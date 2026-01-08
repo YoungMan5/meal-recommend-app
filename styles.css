@@ -1,0 +1,35 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ============================
+    全ページ共通フォント
+============================ */
+
+/* 通常テキスト用 */
+html, body, .stApp,
+.stApp p, .stApp h1, .stApp h2, .stApp h3,
+.stApp h4, .stApp h5, .stApp h6,
+.stApp label, .stApp input,
+.stApp textarea {
+    font-family: "DotGothic16", sans-serif !important;
+}
+
+/* ボタンの文字だけ */
+.stApp button {
+    font-family: "DotGothic16", sans-serif !important;
+}
+
+/* ============================
+    Material Icons を絶対保護
+============================ */
+
+.material-icons,
+.material-icons-outlined,
+button[kind="header"] span {
+    font-family: "Material Icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}

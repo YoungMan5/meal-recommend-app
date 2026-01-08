@@ -1,0 +1,50 @@
+/* ==========================
+   Mobile UI (max-width: 768px)
+   ========================== */
+@media (max-width: 768px) {
+
+  /* 全体余白を減らす */
+  .block-container {
+    padding: 0.75rem 0.75rem 5rem;
+  }
+
+  /* フォントサイズ少し大きく */
+  html, body {
+    font-size: 16px;
+  }
+
+  /* columns を縦並びに */
+  div[data-testid="column"] {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* 画像を画面幅に合わせる */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ボタンを指で押しやすく */
+  button {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  /* テキスト入力 */
+  input, textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* サイドバーを自動的に閉じる */
+  section[data-testid="stSidebar"] {
+    width: 0 !important;
+    min-width: 0 !important;
+  }
+
+  /* サイドバー開閉ボタンは残す */
+  button[kind="header"] {
+    display: block;
+  }
+}
