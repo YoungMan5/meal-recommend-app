@@ -129,7 +129,6 @@ with tab1:
                     margin:5px 0;
                     border-radius:8px;
                     border:1px solid #ddd;
-                    background:#fafafa;
                     display:flex;
                     flex-wrap:wrap;
                     gap:15px;

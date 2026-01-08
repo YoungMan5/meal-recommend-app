@@ -248,7 +248,6 @@ for i, badge in enumerate(BADGES):
     st.markdown("""
     <style>
     .badge-card {
-        background:#ffffff;
         border-radius:14px;
         padding:12px;
         box-shadow:0 4px 12px rgba(0,0,0,0.15);
