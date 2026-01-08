@@ -6,6 +6,12 @@ from utils import load_css
 
 st.set_page_config(page_title="Nutrition App", layout="wide", initial_sidebar_state="collapsed")
 
+query_params = st.query_params
+
+# 管理者用URL判定
+if query_params.get("admin") == "1":
+    st.switch_page("pages/_99_Admin.py")
+
 load_css("styles.css")
 load_css("assets/css/mobile.css")
 
