@@ -1,26 +1,14 @@
 import streamlit as st
 
-def render_sidebar(active=None):
+def render_sidebar(is_admin=False):
     with st.sidebar:
-        st.markdown("## 📂 メニュー")
+        st.markdown("## Menu")
 
-        page = st.radio(
-            "",
-            ["🏠 ホーム", "🔐 ログイン", "👤 プロフィール", "🍽 食事", "🎮 RPG", "🏅 称号"],
-            index=0,
-            key="sidebar_nav"
-        )
-
-    # ページ遷移
-    if page == "🏠 ホーム":
-        st.switch_page("app.py")
-    elif page == "🔐 ログイン":
-        st.switch_page("pages/00_Login.py")
-    elif page == "👤 プロフィール":
-        st.switch_page("pages/01_Profile.py")
-    elif page == "🍽 食事":
-        st.switch_page("pages/02_MealInput.py")
-    elif page == "🎮 RPG":
-        st.switch_page("pages/03_RPG_and_Gacha.py")
-    elif page == "🏅 称号":
-        st.switch_page("pages/04_Badges.py")
+        if not is_admin:
+            st.page_link("pages/00_Login.py", label="🔐 ログイン")
+            st.page_link("pages/01_Profile.py", label="👤 プロフィール")
+            st.page_link("pages/02_MealInput.py", label="🍱 食事登録")
+            st.page_link("pages/03_RPG_and_Gacha.py", label="🎮 RPG")
+            st.page_link("pages/04_Badges.py", label="🏅 実績")
+        else:
+            st.page_link("pages/_hidden_Admin.py", label="🛠 Admin")

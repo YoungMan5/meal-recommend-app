@@ -9,8 +9,10 @@ from utils import load_css, calc_nutrient_targets
 import json
 
 from db import load_meals, load_user_badges, save_user_badge, get_user_profile
+from components.render_sidebar import render_sidebar
 
 load_css("styles.css")
+render_sidebar(is_admin=False)
 st.set_page_config(page_title="実績", layout="wide")
 st.title("📛 実績一覧")
 

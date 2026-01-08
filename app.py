@@ -3,14 +3,11 @@ import streamlit as st
 import time
 import base64
 from utils import load_css
+from components.render_sidebar import render_sidebar
 
 st.set_page_config(page_title="Nutrition App", layout="wide", initial_sidebar_state="collapsed")
 
-query_params = st.query_params
-
-# 管理者用URL判定
-if query_params.get("admin") == "1":
-    st.switch_page("pages/_99_Admin.py")
+render_sidebar(is_admin=False)
 
 load_css("styles.css")
 load_css("assets/css/mobile.css")

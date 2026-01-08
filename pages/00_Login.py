@@ -2,10 +2,11 @@
 import streamlit as st
 from db import login, create_user, init_db
 from utils import load_css
-
+from components.render_sidebar import render_sidebar
 
 load_css("styles.css")
 init_db()
+render_sidebar(is_admin=False)
 
 st.title("ログイン / 新規登録")
 

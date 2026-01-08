@@ -7,8 +7,10 @@ import json
 import datetime
 import pandas as pd
 from utils import load_css
+from components.render_sidebar import render_sidebar
 
 load_css("styles.css")
+render_sidebar(is_admin=False)
 st.set_page_config(page_title="食事入力", layout="wide")
 st.title("🍱 食事入力")
 
@@ -283,7 +285,7 @@ with tab1:
             exp_gain += 1      # 締め
         elif category == "間食":
             exp_gain += 0      # おまけ枠
-            
+
         add_exp(user_id, exp_gain)
 
         # ---------------------------------------

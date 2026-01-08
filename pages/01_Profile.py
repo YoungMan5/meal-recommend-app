@@ -3,8 +3,10 @@ import streamlit as st
 from db import get_user_profile, save_user_profile
 from utils import load_css
 import datetime
+from components.render_sidebar import render_sidebar
 
 load_css("styles.css")
+render_sidebar(is_admin=False)
 st.set_page_config(page_title="プロフィール", layout="wide")
 st.title("👤 プロフィール")
 

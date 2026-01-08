@@ -5,8 +5,10 @@ from db import load_username, get_progress, add_exp, LEVEL_EXP, get_consecutive_
 from utils import load_css
 from dataclasses import dataclass
 from datetime import datetime
+from components.render_sidebar import render_sidebar
 
 load_css("styles.css")
+render_sidebar(is_admin=False)
 st.set_page_config(page_title="育成＆ガチャ", layout="wide")
 
 if "user_id" not in st.session_state:
